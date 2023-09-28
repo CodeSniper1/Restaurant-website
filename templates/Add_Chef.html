@@ -1,0 +1,35 @@
+{% include "admin_header.html" %} 
+
+
+
+
+<div class="form-container">
+    <h4 class="mb-4" style="text-align:center">Add New Chef</h4>
+
+    <form method="post" action="{% url 'AddChefs' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row g-3">
+            <div class="col-12 col-sm-6">
+                <input type="text" class="form-control" placeholder="Enter Chef Name" name="name">
+            </div>
+            <div class="col-12 col-sm-6">
+                <input type="text" class="form-control" placeholder="Job Description" name="designation">
+            </div>
+            <div class="col-12">
+                <label for="file">Select Image:</label>
+                <input type="file" name="file" id="file">
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    
+
+
+
+
+
+
+
+
+{% include "admin_footer.html" %}
